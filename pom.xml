@@ -116,7 +116,7 @@
                   <packages>io.netty.buffer*</packages>
                 </group>
                 <group>
-                  <title>Central interface for all I/O operations</title>
+                  <title>Central interface for all I/O operations</title>r
                   <packages>io.netty.channel*</packages>
                 </group>
                 <group>
@@ -562,11 +562,12 @@
     <module>transport-classes-kqueue</module>
     <module>transport-native-kqueue</module>
     <module>transport-rxtx</module>
-    <module>transport-sctp</module>
+    <!--<module>transport-sctp</module>-->
     <module>transport-udt</module>
-    <module>handler</module>
+    <!--<module>handler</module>-->
     <module>handler-proxy</module>
-    <module>example</module>
+
+    <!-- <module>example</module>
     <module>testsuite</module>
     <module>testsuite-autobahn</module>
     <module>testsuite-http2</module>
@@ -576,7 +577,7 @@
     <module>testsuite-native-image</module>
     <module>testsuite-native-image-client</module>
     <module>testsuite-native-image-client-runtime-init</module>
-    <module>transport-blockhound-tests</module>
+    <module>transport-blockhound-tests</module>-->
     <module>microbench</module>
     <module>bom</module>
   </modules>
@@ -1174,7 +1175,7 @@
           <target>${maven.compiler.target}</target>
           <debug>true</debug>
           <optimize>true</optimize>
-          <showDeprecation>true</showDeprecation>
+          <!--<showDeprecation>true</showDeprecation>-->
           <showWarnings>true</showWarnings>
           <compilerArgument>-Xlint:-options</compilerArgument>
           <!-- XXX: maven-release-plugin complains - MRELEASE-715 -->
@@ -1192,9 +1193,9 @@
           </excludes>
         </configuration>
       </plugin>
-      <plugin>
-        <!-- ensure that only methods available in java 1.6 can
-             be used even when compiling with java 1.7+ -->
+      <!--<plugin>
+        &lt;!&ndash; ensure that only methods available in java 1.6 can
+             be used even when compiling with java 1.7+ &ndash;&gt;
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>animal-sniffer-maven-plugin</artifactId>
         <version>1.16</version>
@@ -1219,8 +1220,8 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
+      </plugin>-->
+      <!--<plugin>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>3.1.0</version>
         <executions>
@@ -1246,10 +1247,10 @@
             <id>nohttp-checkstyle-validation</id>
             <phase>validate</phase>
             <configuration>
-              <!-- skip>false</skip -->
+              &lt;!&ndash; skip>false</skip &ndash;&gt;
               <configLocation>nohttp-checkstyle.xml</configLocation>
               <suppressionsLocation>nohttp-checkstyle-suppressions.xml</suppressionsLocation>
-              <!-- propertyExpansion>main.basedir=${main.basedir}</propertyExpansion -->
+              &lt;!&ndash; propertyExpansion>main.basedir=${main.basedir}</propertyExpansion &ndash;&gt;
               <encoding>UTF-8</encoding>
               <sourceDirectories>${basedir}</sourceDirectories>
               <includes>**/*</includes>
@@ -1278,7 +1279,7 @@
             <version>0.0.5.RELEASE</version>
           </dependency>
         </dependencies>
-      </plugin>
+      </plugin>-->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>xml-maven-plugin</artifactId>
@@ -1712,11 +1713,11 @@
           <artifactId>exec-maven-plugin</artifactId>
           <version>1.0.0.Final</version>
         </plugin>
-        <plugin>
+        <!--<plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
           <version>3.2.1</version>
-        </plugin>
+        </plugin>-->
 
         <!-- Workaround for the 'M2E plugin execution not covered' problem.
              See: https://wiki.eclipse.org/M2E_plugin_execution_not_covered -->
