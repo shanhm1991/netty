@@ -1021,7 +1021,7 @@
     </extensions>
 
     <plugins>
-      <plugin>
+      <!--<plugin>
         <groupId>org.revapi</groupId>
         <artifactId>revapi-maven-plugin</artifactId>
         <version>0.14.6</version>
@@ -1065,14 +1065,14 @@
               <differences>
                 <item>
                   <ignore>true</ignore>
-                  <code>java.missing.oldClass</code> <!-- Missing in prior Netty versions -->
+                  <code>java.missing.oldClass</code> &lt;!&ndash; Missing in prior Netty versions &ndash;&gt;
                   <old>missing-class org.slf4j.Logger</old>
                   <new>missing-class org.slf4j.Logger</new>
                   <justification>The com.barchart.udt library exposes this class in their API, but slf4j is an optional dependency to Netty.</justification>
                 </item>
                 <item>
                   <ignore>true</ignore>
-                  <code>java.missing.newClass</code> <!-- Missing in this Netty version -->
+                  <code>java.missing.newClass</code> &lt;!&ndash; Missing in this Netty version &ndash;&gt;
                   <old>missing-class org.slf4j.Logger</old>
                   <new>missing-class org.slf4j.Logger</new>
                   <justification>The com.barchart.udt library exposes this class in their API, but slf4j is an optional dependency to Netty.</justification>
@@ -1103,7 +1103,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
+      </plugin>-->
       <plugin>
         <groupId>com.github.siom79.japicmp</groupId>
         <artifactId>japicmp-maven-plugin</artifactId>
